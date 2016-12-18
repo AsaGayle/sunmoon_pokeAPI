@@ -1,3 +1,7 @@
+//TODO: Fix these issues:
+//2016-12-18T12:43:41.493-0500 W NETWORK  [thread1] Failed to connect to 127.0.0.1:27017, reason: errno:10061 No connection could be made because the target machine actively refused it.
+//2016-12-18T12:43:41.494-0500 E QUERY    [thread1] Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed :
+
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
@@ -30,9 +34,7 @@ var pokeSchema = new mongoose.Schema({
   fGenderRatio: Number
 });
 
-var moveSchema = new mongoose.Schema({
 
-});
 
 //Return model
 module.exports = restful.model('Pokemon', pokeSchema);
